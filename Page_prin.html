@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestion des Casiers</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <div class="topbar">
+    <img src="logo.png" alt="Logo Police" class="logo-medium"/>
+    <h2>Gestion des casiers judiciaires</h2>
+    <button onclick="logout()">Déconnexion</button>
+  </div>
+
+  <div id="alert" class="alert"></div>
+  
+  <div class="group-controls">
+    <input type="text" id="groupCode" placeholder="Code de groupe" />
+    <button onclick="createGroup()">Créer un groupe</button>
+    <button onclick="joinGroup()">Rejoindre</button>
+  </div>
+
+  <div class="form">
+    <input placeholder="Nom de l'officier" id="officier" />
+    <input placeholder="Nom du suspect" id="suspect" />
+    <input placeholder="Date de naissance" id="dob" type="date" />
+    <input placeholder="Lieu de naissance" id="birthplace" />
+    <input placeholder="Crime" id="crime" />
+    <input placeholder="Sanction" id="sanction" />
+    <button id="addBtn" onclick="handleCasier()">Créer Casier</button>
+
+  </div>
+
+  <div id="casierList" class="casier-list"></div>
+
+  <script src="site.js"></script>
+</body>
+</html>
